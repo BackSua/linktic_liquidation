@@ -22,12 +22,14 @@ import java.math.BigDecimal;
 public class PremiumEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
-
     @Column(name = "protection_code")
     private Long protectionCode;
-
+    @Column(name = "minimum_age")
     private Long minimumAge;
+    @Column(name = "maximum_age")
     private Long maximumAge;
+    @Column(name = "premium_percentage")
     private BigDecimal premiumPercentage;
 }

@@ -1,5 +1,6 @@
 package com.linktic.linktic_test.infrastructure.output.persistence.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -18,6 +19,8 @@ import lombok.Setter;
 @Table(name = "protections")
 public class ProtectionEntity {
     @Id
+    @Column(name = "code")
     private Long code;
+    @Column(name = "name")
     private String name;
 }
